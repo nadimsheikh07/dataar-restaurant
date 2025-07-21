@@ -1,10 +1,41 @@
-import { Box, Typography } from "@mui/material"
+import { AppBar, Box, IconButton, Toolbar, Typography } from "@mui/material"
+import MenuIcon from '@mui/icons-material/Menu';
 
-const WebHeader = () => {
+type WebHeaderProps = {
+    open: boolean;
+    setOpen: () => void;
+
+};
+
+const WebHeader = ({ open, setOpen }: WebHeaderProps) => {
     return (
-        <Box>
-            <Typography>Header</Typography>
-        </Box>
+        <AppBar position="static">
+            <Toolbar>
+                <Typography
+                    variant="h6"
+                    noWrap
+                    component="a"
+                    href="/"
+                    sx={{
+                        flexGrow: 1,
+                    }}
+                >
+                    Dataar Restraurant
+                </Typography>
+
+
+                <IconButton
+                    size="large"
+                    edge="start"
+                    color="inherit"
+                    aria-label="menu"
+                    sx={{ mr: 2 }}
+                    onClick={() => setOpen(!open)}
+                >
+                    <MenuIcon />
+                </IconButton>
+            </Toolbar>
+        </AppBar>
     )
 }
 
