@@ -21,6 +21,18 @@ const WebDrawer = ({ open, onClose }: WebDrawerProps) => {
                 <ListItem>
                     <ListItemText primary="Home" />
                 </ListItem>
+                <ListItem>
+                    <ListItemText primary="About" />
+                </ListItem>
+                <ListItem>
+                    <ListItemText primary="Menu" />
+                </ListItem>
+                <ListItem>
+                    <ListItemText primary="Services" />
+                </ListItem>
+                <ListItem>
+                    <ListItemText primary="Contact" />
+                </ListItem>
             </List>
         </Drawer>
     );
